@@ -1,0 +1,12 @@
+version: '3.5'
+services: 
+  python:
+    build: ./
+    container_name: sh_python
+    volumes:
+      - type: bind
+        source: ./src/
+        target: /var/www/src
+    restart: always
+    tty: true
+
