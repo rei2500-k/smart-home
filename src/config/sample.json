@@ -1,0 +1,6 @@
+{
+    "switch-bot": {
+        "token": "sample_token",
+        "secret": "sample_secret"
+    }
+}
