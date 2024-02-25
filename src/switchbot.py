@@ -58,10 +58,27 @@ def device_list(header: dict):
     return response
 
 def device_status(device: str, header: dict):
+    """デバイスIDからそのデバイスのステータスを取得
+
+    Args:
+        device (str): デバイスID
+        header (dict): APIヘッダ
+
+    Returns:
+        _type_: _description_
+    """    
     response = requests.get(f'{HOST}/v1.1/devices/{device}/status', headers=header)
 
     return response
 
+
 if __name__ == '__main__':
     header = make_header()
-    print(device_list(header).json())
+    response = device_list(header).json()
+    device_list = response['body']['deviceList']
+
+    for d in device_list:
+        if d['deviceType'] in ('WoIOSensor', 'Hub 2'):
+            response = device_status(d['deviceId'], header).json()
+            print(response['body']['temperature'])
+            print(response['body']['humidity'])
