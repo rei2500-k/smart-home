@@ -7,8 +7,8 @@ import requests
 
 
 # 緯度経度取得
-LAT = config['switch-bot']['lat']
-LNG = config['switch-bot']['lng']
+LAT = config['switch-bot']['sample_lat']
+LNG = config['switch-bot']['sample_lng']
 
 def sunset_sunrise(date: datetime.datetime, lat: float, lng: float) -> tuple:
     """日の出、日の入り時刻を取得

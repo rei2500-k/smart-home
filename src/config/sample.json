@@ -1,6 +1,8 @@
 {
     "switch-bot": {
         "token": "sample_token",
-        "secret": "sample_secret"
+        "secret": "sample_secret",
+        "lat": "sample_lat",
+        "lng": "sample_lng"
     }
 }
