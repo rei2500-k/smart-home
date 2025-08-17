@@ -1,4 +1,12 @@
 {
+    "db_connection": {
+        "host": "sample_host",
+        "port": 5432,
+        "user": "sample_user",
+        "password": "sample_password",
+        "database": "sample_db"
+    },
+    
     "switch-bot": {
         "token": "sample_token",
         "secret": "sample_secret",
