@@ -1,4 +1,3 @@
-version: '3.5'
 services: 
   python:
     build: ./
@@ -10,3 +9,11 @@ services:
     restart: always
     tty: true
 
+  db:
+    image: postgres:17.6-alpine
+    container_name: sh_db
+    environment:
+      POSTGRES_USER: sh_user
+      POSTGRES_PASSWORD: sh_password
+      POSTGRES_DB: sh_db
+    
